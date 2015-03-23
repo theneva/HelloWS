@@ -11,6 +11,13 @@
         <th>Username</th>
         <th>Real name</th>
     </tr>
+    <tr>
+        <td><input type="text" class="form-control" ng-model="username"/></td>
+        <td><input type="text" class="form-control" ng-model="realName"/></td>
+        <td>
+            <button class="btn btn-success" ng-click="createUser(username, realName)">Create new user</button>
+        </td>
+    </tr>
     <tr ng-repeat="user in users">
         <td>{{user.username}}</td>
         <td>{{user.realName}}</td>
