@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="usersAppDemo">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <title>Document</title>
+</head>
+<body ng-controller="UsersController">
+
+<table class="table">
+    <tr>
+        <th>Username</th>
+        <th>Real name</th>
+    </tr>
+
+    <tr>
+        <td><input type="text" class="form-control" ng-model="username"/></td>
+        <td><input type="text" class="form-control" ng-model="realName"/></td>
+        <td>
+            <button class="btn btn-success" ng-click="createUser(username, realName)">Create user</button>
+        </td>
+    </tr>
+
+    <tr ng-repeat="user in users">
+        <td>{{user.username}}</td>
+        <td>{{user.realName}}</td>
+    </tr>
+</table>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="js/controllers.js"></script>
+</body>
+</html>
