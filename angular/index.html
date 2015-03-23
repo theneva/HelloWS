@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="helloWs">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <title>Document</title>
+</head>
+<body ng-controller="UsersController">
+<table class="table">
+    <tr>
+        <th>Username</th>
+        <th>Real name</th>
+    </tr>
+    <tr ng-repeat="user in users">
+        <td>{{user.username}}</td>
+        <td>{{user.realName}}</td>
+    </tr>
+</table>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="js/controllers.js"></script>
+</body>
+</html>
